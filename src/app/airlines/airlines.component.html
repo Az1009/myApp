@@ -1,0 +1,39 @@
+<div>
+    <h2>Basic Table</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Logo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--             schleife um die Flughäfen und Logos-->
+            <tr *ngFor="let airline of airlineList">
+
+                <a routerLink="/details-airline/{{airline.id}}">
+                    <td>{{airline.name}} </td>
+                </a>
+
+                <a routerLink="">
+
+                    <td><img src="{{airline.logo}}" alt=""></td>
+                </a>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+
+</div>
+<!-- <app-passenger></app-passenger> -->
+<!-- <div *ngIf="airlineInterface" class="card">
+    <div class="card-body"></div>
+    <h5>AirlineApi</h5>
+    <p class="card-text">airlineList:{{airlineInterface.name}} </p>
+    <p class="card-text">airlineList:{{airlineInterface.logo}} </p>
+
+    <p class="card-text">airlineList:{{airlineInterface.country}} </p>
+
+</div> -->
